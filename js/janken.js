@@ -372,6 +372,12 @@ else {
     }
 }
 
+$(function(){
+    $(document).on('input','#Input',function(){
+        $('.Text').text($('#Input').val());
+    });
+});
+
 
 
 

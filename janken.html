@@ -32,7 +32,7 @@
             <img src="img/hananokeiji.png" id="keiji">
         </div>
         <div id="textbox">
-            <p>おぉ！<span id="Text"></span>殿か！待っておったぞ！<br>
+            <p>おぉ！<span class="Text"></span>殿か！待っておったぞ！<br>
                 今日は面白い遊びをするそうだな！さぁ、始めよう！</p>
         </div>
     </div>
@@ -52,7 +52,7 @@
     <div id="endingwraper">
         <img src="img/ending.png" id="ending">
         <div id="textbox2">
-            <p><span id="Text"></span>殿、今日は誠に良き日であった！<br>
+            <p><span class="Text"></span>殿、今日は誠に良き日であった！<br>
                 これからも戦友として、このG'sでともに戦おう！</p>
         </div>
     </div>
@@ -66,43 +66,35 @@
     <div id="win">
         <img src="img/IMG_4115.jpg" id="winimg">
         <p id="wintext">勝 利</p>
-        <p id="winbox">はは...<span id="Text"></span>殿は強うござるな...<br>是非またお手合わせ願いたい！</p>
+        <p id="winbox">はは...<span class="Text"></span>殿は強うござるな...<br>是非またお手合わせ願いたい！</p>
         <p id="p_reload">TOP</p>
     </div>
     <div id="draw">
         <img src="img/draw.jpg" id="drawimg">
         <p id="drawtext">引分</p>
-        <p id="drawbox">五分ですなぁ！<span id="Text"></span>殿とは<br>良き戦友になれそうだ！共に風流仕ろう！</p>
+        <p id="drawbox">五分ですなぁ！<span class="Text"></span>殿とは<br>良き戦友になれそうだ！共に風流仕ろう！</p>
         <p id="d_reload">TOP</p>
     </div>
     <div id="losegu">
         <img src="img/gu.jpg" id="loseguimg">
         <p id="losegutext">敗北</p>
-        <p id="losegubox">言葉で通じぬものは拳で語るのみよ！<br>次こそ傾かれよ！<span id="Text"></span>殿！</p>
+        <p id="losegubox">言葉で通じぬものは拳で語るのみよ！<br>次こそ傾かれよ！<span class="Text"></span>殿！</p>
         <p id="p_reload"></p>
     </div>
     <div id="losecho">
         <img src="img/cyo.jpg" id="losechoimg">
         <p id="losechotext">敗北</p>
-        <p id="losechobox">指で刃物を表すとは何とも傾いたものよ！<br>次は<span id="Text"></span>殿も傾かれよ！</p>
+        <p id="losechobox">指で刃物を表すとは何とも傾いたものよ！<br>次は<span class="Text"></span>殿も傾かれよ！</p>
         <p id="p_reload"></p>
     </div>
     <div id="losepa">
         <img src="img/par.JPG" id="losepaimg">
         <p id="losepatext">敗北</p>
-        <p id="losepabox">なんとか勝て申した！<span id="Text"></span>殿も見事であった！<br>さぁ！共に舞おうぞ！</p>
+        <p id="losepabox">なんとか勝て申した！<span class="Text"></span>殿も見事であった！<br>さぁ！共に舞おうぞ！</p>
         <p id="p_reload"></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/janken.js"></script>
-    <script>
-        function buttonclick() {
-            let input_var = document.getElementById("Input");
-            let button_var = document.getElementById("pushman");
-            let text_var = document.getElementById("Text");
-            text_var.innerHTML = input_var.value;
-        }
-    </script>
 </body>
 
 </html>
