@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花の慶次〜じゃんけんアプリ〜</title>
+    <link rel="stylesheet" href="./css/janken.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/dot.ico">
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+    <div id="fusumawraper">
+        <div id="fusuma_left">
+            <img src="img/left.jpg" alt="#" id="left">
+        </div>
+        <div id="fusuma_right">
+            <img src="img/right.jpg" alt="#" id="right">
+        </div>
+        <div id="naoe">
+            <div id="nameget">
+                <p>そなたの名を入れ、わしを押すのだ！</p>
+                <input type="Input" id="Input" value="" required placeholder="直江　押男">
+            </div>
+            <img src="img/naoepushman.png" id="pushman" onclick="buttonclick()">
+        </div>
+    </div>
+    <div id="initial">
+        <div id="image">
+            <img src="img/hananokeiji.png" id="keiji">
+        </div>
+        <div id="textbox">
+            <p>おぉ！<span id="Text"></span>殿か！待っておったぞ！<br>
+                今日は面白い遊びをするそうだな！さぁ、始めよう！</p>
+        </div>
+    </div>
+    <div id="janken">
+        <p id="gu_btn">👊</p>
+        <p id="cho_btn">✌️</p>
+        <p id="par_btn">🖐️</p>
+    </div>
+    <!-- キセルルート -->
+    <div id="nextcut">
+        <img src="img/tengeki.png" id="tengeki">
+    </div>
+    <audio src="mp3,4/nojiru.mp3" id="nojiru"></audio>
+    <div id="movieplay">
+        <video src="mp3,4/IMG_4095.MOV" id="kiseru"></video>
+    </div>
+    <div id="endingwraper">
+        <img src="img/ending.png" id="ending">
+        <div id="textbox2">
+            <p><span id="Text"></span>殿、今日は誠に良き日であった！<br>
+                これからも戦友として、このG'sでともに戦おう！</p>
+        </div>
+    </div>
+    <p id="reload">TOP</p>
+    <!-- キセルルート終了 -->
+
+    <!-- 以下通常ルート -->
+    <div id="normal">
+        <img src="img/bureikou.png" id="bureikou">
+    </div>
+    <div id="win">
+        <img src="img/IMG_4115.jpg" id="winimg">
+        <p id="wintext">勝 利</p>
+        <p id="winbox">はは...<span id="Text"></span>殿は強うござるな...<br>是非またお手合わせ願いたい！</p>
+        <p id="p_reload">TOP</p>
+    </div>
+    <div id="draw">
+        <img src="img/draw.jpg" id="drawimg">
+        <p id="drawtext">引分</p>
+        <p id="drawbox">五分ですなぁ！<span id="Text"></span>殿とは<br>良き戦友になれそうだ！共に風流仕ろう！</p>
+        <p id="d_reload">TOP</p>
+    </div>
+    <div id="losegu">
+        <img src="img/gu.jpg" id="loseguimg">
+        <p id="losegutext">敗北</p>
+        <p id="losegubox">言葉で通じぬものは拳で語るのみよ！<br>次こそ傾かれよ！<span id="Text"></span>殿！</p>
+        <p id="p_reload"></p>
+    </div>
+    <div id="losecho">
+        <img src="img/cyo.jpg" id="losechoimg">
+        <p id="losechotext">敗北</p>
+        <p id="losechobox">指で刃物を表すとは何とも傾いたものよ！<br>次は<span id="Text"></span>殿も傾かれよ！</p>
+        <p id="p_reload"></p>
+    </div>
+    <div id="losepa">
+        <img src="img/par.JPG" id="losepaimg">
+        <p id="losepatext">敗北</p>
+        <p id="losepabox">なんとか勝て申した！<span id="Text"></span>殿も見事であった！<br>さぁ！共に舞おうぞ！</p>
+        <p id="p_reload"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/janken.js"></script>
+    <script>
+        function buttonclick() {
+            let input_var = document.getElementById("Input");
+            let button_var = document.getElementById("pushman");
+            let text_var = document.getElementById("Text");
+            text_var.innerHTML = input_var.value;
+        }
+    </script>
+</body>
+
+</html>
