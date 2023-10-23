@@ -125,7 +125,7 @@ else {
     const jnum = Math.random();
     const jselect = Math.floor(jnum * 3);
     console.log(jselect);
-    if (jselect == 0) //相手がグーの場合
+    if (jselect == 0) //慶次がグーの場合
     {
         $('#janken').on('click', function () {
             $('#bureikou').fadeIn(800);
@@ -144,7 +144,7 @@ else {
         });
         // ここまでがボタン押下までの指示
 
-        //以下グーボタンの指示
+        //グーをクリックした時
         $('#gu_btn').on('click', function () {
             $('#drawtext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -165,7 +165,7 @@ else {
             window.location.reload();
         });
 
-        //以下チョキの指示
+        //チョキをクリックした時
         $('#cho_btn').on('click', function () {
             $('#losegutext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -186,7 +186,7 @@ else {
             window.location.reload();
         });
 
-        ///以下パーの指示
+        //　パーをクリックした時
         $('#par_btn').on('click', function () {
             $('#wintext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -208,7 +208,7 @@ else {
         });
 
     }
-    else if (jselect == 1) //チョキの場合
+    else if (jselect == 1) //慶次がチョキの場合
     {
         $('#janken').on('click', function () {
             $('#bureikou').fadeIn(800);
@@ -226,7 +226,7 @@ else {
             $('#initial').remove();
         });
 
-        // グーの時
+        // グーをクリック
         $('#gu_btn').on('click', function () {
             $('#wintext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -247,7 +247,7 @@ else {
             window.location.reload();
         });
 
-        //　チョキの時
+        //　チョキをクリック
         $('#cho_btn').on('click', function () {
             $('#drawtext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -268,7 +268,7 @@ else {
             window.location.reload();
         });
         
-        //　パーの時
+        //パーをクリック
         $('#par_btn').on('click', function () {
             $('#losechotext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -291,7 +291,7 @@ else {
 
 
     }
-    else //パーの場合
+    else //慶次がパーの場合
     {
         $('#janken').on('click', function () {
             $('#bureikou').fadeIn(800);
@@ -309,7 +309,7 @@ else {
             $('#initial').remove();
         });
 
-        // グーの時
+        // グーをクリック
         $('#gu_btn').on('click', function () {
             $('#losepatext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -329,7 +329,7 @@ else {
         $('#p_reload').on('click', function () {
             window.location.reload();
         });
-        //　チョキの時
+        //　チョキをクリック
         $('#cho_btn').on('click', function () {
             $('#wintext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -349,7 +349,7 @@ else {
         $('#p_reload').on('click', function () {
             window.location.reload();
         });
-        //　パーの時
+        //　パーをクリック
         $('#par_btn').on('click', function () {
             $('#drawtext').delay(3500).slideDown().delay(1000).animate({ 'left': '72%' });
         });
@@ -372,6 +372,7 @@ else {
     }
 }
 
+//入力した名前を反映する
 $(function(){
     $(document).on('input','#Input',function(){
         $('.Text').text($('#Input').val());
