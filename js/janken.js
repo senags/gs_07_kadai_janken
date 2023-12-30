@@ -1,4 +1,8 @@
 $('#pushman').on("click", function () {
+    $('#right').delay(500).animate({ 'left': '2000px' }, 1000);
+});
+
+$('#pushman').on("click", function () {
     $('#right').delay(2000).fadeOut(0);
 });
 
