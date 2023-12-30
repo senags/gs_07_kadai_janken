@@ -6,12 +6,6 @@ body {
     font-family: "Sawarabi Mincho";
 }
 
-#fusumawraper {
-    margin: -10px;
-    height: 800px;
-    position: relative;
-}
-
 #keiji {
     opacity: 0;
 }
